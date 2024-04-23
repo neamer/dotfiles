@@ -1,0 +1,159 @@
+
+// // Place your key bindings in this file to override the defaults
+[
+//   // NAVIGATION
+  {
+    "key": "shift+esc",
+    "command": "notifications.clearAll"
+  },
+  {
+    "key": "ctrl+shift+a",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+b",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.togglePanel",
+  },
+  {
+    "key": "ctrl+shift+n",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+//   // FILE TREE
+  {
+    "command": "workbench.action.toggleSidebarVisibility",
+    "key": "ctrl+n",
+    "when": "!inQuickOpen"
+  },
+  {
+    "command": "workbench.files.action.focusFilesExplorer",
+    "key": "ctrl+e",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "renameFile",
+    "key": "r",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "command": "deleteFile",
+    "key": "d",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+
+//   // EXTRA
+//   {
+//     "key": "ctrl+shift+5",
+//     "command": "editor.emmet.action.matchTag"
+//   },
+//   {
+//     "key": "ctrl+z",
+//     "command": "workbench.action.toggleZenMode"
+//   },
+//   {
+//     "key": "alt+i",
+//     "command": "workbench.action.terminal.toggleTerminal",
+//     "when": "terminal.active"
+//   },
+//   {
+//     "key": "ctrl+`",
+//     "command": "-workbench.action.terminal.toggleTerminal",
+//     "when": "terminal.active"
+//   }
+// ]
+
+  // TERMINAL
+
+  {
+    "key": "alt+i",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal",
+    "when": "terminal.active"
+  },
+
+  // Menu navigation
+  // {
+  //   "key": "alt+n",
+  //   "command": "extension.vim_ctrl+n",
+  //   "when": "editorTextFocus && vim.active && vim.use<C-n> && !inDebugRepl || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+  // },
+  // {
+  //   "key": "alt+n",
+  //   "command": "workbench.action.quickOpenSelectNext",
+  //   "when": "vim.active && vim.use<C-n> && !inDebugRepl && inQuickOpen"
+  // },
+  // {
+  //   "key": "ctrl+n",
+  //   "command": "-extension.vim_ctrl+n",
+  //   "when": "editorTextFocus && vim.active && vim.use<C-n> && !inDebugRepl || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-n> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+  // },
+  // {
+  //   "key": "alt+p",
+  //   "command": "extension.vim_ctrl+p",
+  //   "when": "suggestWidgetVisible && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+  // },
+  // {
+  //   "key": "alt+p",
+  //   "command": "workbench.action.quickOpenSelectPrevious",
+  //   "when": "vim.active && vim.use<C-n> && !inDebugRepl && inQuickOpen"
+  // },
+  // {
+  //   "key": "ctrl+p",
+  //   "command": "-extension.vim_ctrl+p",
+  //   "when": "suggestWidgetVisible && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+  // },
+
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+},
+{
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+},
+{
+    "key": "tab",
+    "command": "filesExplorer.openFilePreserveFocus",
+    "when": "filesExplorerFocus"
+},
+
+  // CENTER ON UP / DOWN
+  {
+    "key": "ctrl+d",
+    "command": "vim.remap",
+    "when": "vim.mode == 'Normal'",
+    "args": {
+      "after": ["<C-d>", "z", "z"]
+    }
+  },
+  {
+    "key": "ctrl+u",
+    "command": "vim.remap",
+    "when": "vim.mode == 'Normal'",
+    "args": {
+      "after": ["<C-u>", "z", "z"]
+    }
+  }
+]
