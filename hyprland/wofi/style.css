@@ -1,0 +1,66 @@
+@define-color background #332b2b;
+@define-color color_urgent #fb4934;
+@define-color text_color #ffffff;
+@define-color title_bg_unfocused #666666;
+@define-color title_outline_active #0e844e;
+@define-color title_outline_unfocused #332b2b;
+
+*{
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+}
+
+window {
+    border-radius: 3px;
+    background-color: rgba(3, 3, 5, 0.75);
+}
+
+#input {
+    margin-bottom: 15px;
+    padding:3px;
+    border-radius: 3px;
+    border: 1px solid #999;
+    color: @primary_blue;
+    background-color: rgba(3, 3, 5, 0.75);
+}
+
+#input > image.left {
+  margin-left: 6px;
+}
+
+#input > image.right {
+  margin-right: 6px;
+}
+
+#inner-box {
+    background-color: @base_alt;
+    box-shadow: -4px -3px 45px 21px rgba(0,0,0,0.35);
+}
+
+#outer-box {
+    margin: 5px;
+    padding: 10px;
+    background-color: @base;
+    border-radius: 3px;
+}
+
+#text {
+    padding: 5px;
+    color: @primary_blue;
+}
+
+#entry {
+    padding: 10px;
+}
+
+#entry:selected {
+  background-color: #ccc;
+  color: #000;
+  font-weight: bolder;
+}
+
+#entry:selected #text {
+  background-color: transparent;
+  color: #000;
+  font-weight: bolder;
+}

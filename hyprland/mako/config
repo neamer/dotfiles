@@ -1,0 +1,16 @@
+default-timeout=2000
+
+# Colors
+background-color=#030305aa
+text-color=#bbbbbb
+border-color=#8aadf4aa
+progress-color=over #313244
+
+# Sizes
+width=350
+margin=22
+border-size=2
+border-radius=3
+
+[urgency=high]
+border-color=#fab387
