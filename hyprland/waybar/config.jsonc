@@ -2,7 +2,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 28, // Waybar height (to be removed for auto height)
+    "height": 26, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 9, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -20,9 +20,9 @@
 	       "tray",
 	       "cpu",
 	       "memory",
-	"network",
-	       "pulseaudio",
-	//        "battery",
+	// "network",
+	      "pulseaudio",
+	      "battery",
         "clock"
     ],
     // Modules configuration
@@ -116,12 +116,12 @@
         "format-alt": "{:%d %B %Y}"
     },
     "cpu": {
-        // "format": "{usage}% ",
-        "format": "{usage}% CPU",
+        "format": "{usage}% ",
+        // "format": "{usage}% CPU",
         "tooltip": false
     },
     "memory": {
-        "format": "{used} GB"
+        "format": "{used}GB \uefc5"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -144,7 +144,7 @@
         },
         "format": "{capacity}% {icon}",
         "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -167,7 +167,8 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
+        // "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-wifi": "Connected ",
         "format-ethernet": "Ethernet 󰈀",
         "tooltip-format": "{ifname} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
@@ -177,15 +178,15 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-bluetooth": "{volume}% {icon}  {format_source}",
+        "format-bluetooth-muted": "󰝟 {icon}  {format_source}",
+        "format-muted": "󰝟 {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "hands-free": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
