@@ -19,3 +19,6 @@ vim.keymap.set("n", "<A-i>", function()
 end, { desc = "Terminal (root dir )" })
 
 vim.keymap.set("t", "<A-i>", "<cmd>close<cr>", { desc = "Hide Terminal" })
+
+vim.keymap.del({ "n", "i", "v" }, "<A-j>")
+vim.keymap.del({ "n", "i", "v" }, "<A-k>")
