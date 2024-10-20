@@ -1,84 +1,168 @@
 {
-    "workbench.colorTheme": "Rosé Pine (no italics)", 
-    "editor.fontSize": 13,
-    "editor.fontFamily": "JetBrainsMono Nerd Font SemiBold",
-    "editor.fontLigatures": true,
-    "editor.minimap.enabled": false,
-    "editor.tabSize": 2,
-    "vim.leader": "<Space>",
-    "vim.hlsearch": true,
-    "vim.normalModeKeyBindingsNonRecursive": [
-      // NAVIGATION
-      // switch b/w buffers
-      { "before": ["H"], "commands": [":bprevious"] },
-      { "before": ["L"], "commands": [":bnext"] },
-  
-      // splits
-      { "before": ["leader", "v"], "commands": [":vsplit"] },
-      { "before": ["leader", "s"], "commands": [":split"] },
-  
-      // panes
-      {
-        "before": ["<C-h>"],
-        "commands": ["workbench.action.focusLeftGroup"]
-      },
-      {
-        "before": ["<C-j>"],
-        "commands": ["workbench.action.focusBelowGroup"]
-      },
-      {
-        "before": ["<C-k>"],
-        "commands": ["workbench.action.focusAboveGroup"]
-      },
-      {
-        "before": ["<C-l>"],
-        "commands": ["workbench.action.focusRightGroup"]
-      },
-      // NICE TO HAVE
-      { "before": ["leader", "w"], "commands": [":w!"] },
-      { "before": ["leader", "q"], "commands": [":q!"] },
-      { "before": ["leader", "x"], "commands": [":x!"] },
-      {
-        "before": ["[", "d"],
-        "commands": ["editor.action.marker.prev"]
-      },
-      {
-        "before": ["]", "d"],
-        "commands": ["editor.action.marker.next"]
-      },
-      {
-        "before": ["<leader>", "l", "a"],
-        "commands": ["editor.action.quickFix"]
-      },
-      { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
-      { "before": ["leader", "l", "f"], "commands": ["editor.action.formatDocument"] },
-      {
-        "before": ["g", "h"],
-        "commands": ["editor.action.showDefinitionPreviewHover"]
-      }
-    ],
-    "vim.visualModeKeyBindings": [
-      // Stay in visual mode while indenting
-      { "before": ["<"], "commands": ["editor.action.outdentLines"] },
-      { "before": [">"], "commands": ["editor.action.indentLines"] },
-      // Move selected lines while staying in visual mode
-      { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
-      { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
-      // toggle comment selection
-      { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
-    ],
-    "window.commandCenter": false,
-    "workbench.layoutControl.enabled": false,
-    "editor.lineNumbers": "relative",
-    "workbench.layoutControl.type": "toggles",
-    "editor.showFoldingControls": "never",
-    "window.menuBarVisibility": "toggle",
-    "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
-    "editor.formatOnSave": true,
-    "[json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // workbench
+  "workbench.colorTheme": "Catppuccin Dark Theme",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.layoutControl.type": "toggles",
+  "workbench.tree.indent": 12,
+  "workbench.startupEditor": "none",
+  "workbench.editor.showTabs": "single",
+  "workbench.activityBar.location": "top",
+  "workbench.layoutControl.enabled": false,
+
+  // editor
+  "editor.fontSize": 15,
+  "editor.fontFamily": "JetBrainsMono Nerd Font Medium",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 4,
+  "editor.lineNumbers": "relative",
+  "editor.showFoldingControls": "never",
+  "editor.cursorBlinking": "smooth",
+  "editor.formatOnSave": true,
+  "editor.scrollbar.verticalScrollbarSize": 14,
+  "editor.scrollbar.horizontalScrollbarSize": 14,
+  "editor.lineHeight": 1.5,
+  "editor.inlayHints.enabled": "offUnlessPressed",
+
+  // other UI
+  "explorer.compactFolders": false,
+  "window.menuBarVisibility": "compact",
+  "terminal.integrated.fontSize": 15,
+  "debug.console.fontSize": 15,
+
+  // formatting
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // custom colors
+  "workbench.colorCustomizations": {
+    "terminal.background": "#0b0b11",
+  },
+
+  // vim options
+  "vim.sneak": true,
+  "vim.incsearch": true,
+  "vim.leader": "<Space>",
+  "vim.hlsearch": true,
+
+  // vim keybindings
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // panes
+    {
+      "before": ["<C-h>"],
+      "commands": ["workbench.action.focusLeftGroup"]
     },
-    "editor.scrollbar.verticalScrollbarSize": 8,
-    "editor.scrollbar.horizontalScrollbarSize": 10,
-    "workbench.startupEditor": "none",
+    {
+      "before": ["<C-j>"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["<C-k>"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["<C-l>"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+
+    // ACTIONS
+    // editor actions
+    {
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      "before": ["g", "D"],
+      "commands": ["editor.action.goToTypeDefinition"]
+    },
+    {
+      "before": ["leader", "l", "r"],
+      "commands": ["editor.action.rename"]
+    },
+    {
+      "before": ["g", "r"],
+      "commands": ["editor.action.goToReferences"]
+    },
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["<leader>", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    {
+      "before": ["leader", "l", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
+
+    // in-file navigation
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["[", "e"],
+      "commands": ["editor.action.error.prev"]
+    },
+    {
+      "before": ["]", "e"],
+      "commands": ["editor.action.error.next"]
+    },
+
+    // side bar
+    {
+      "before": ["<leader>", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+    {
+      "before": ["<leader>", "g"],
+      "commands": ["workbench.view.scm"]
+    },
+
+    // search
+    {
+      "before": ["leader", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["leader", "f", "r"],
+      "commands": ["workbench.action.showAllEditorsByMostRecentlyUsed"]
+    },
+    {
+      "before": ["leader", "f", "g"],
+      "commands": ["workbench.action.findInFiles"]
+    },
+
+    // buffer navigation
+    { "before": ["H"], "commands": [":bprevious"] },
+    { "before": ["L"], "commands": [":bnext"] },
+
+  ],
+  "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    // Move selected lines while staying in visual mode
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    // toggle comment selection
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+  ],
 }
