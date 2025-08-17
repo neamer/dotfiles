@@ -1,15 +1,16 @@
 return {
   "akinsho/bufferline.nvim",
-  opts = {
-    options = {
-      offsets = {
-        {
-          filetype = "NvimTree",
-          text = "",
-          highlight = "Directory",
-          text_align = "left",
-        },
-      },
-    },
-  },
+  enabled = false,
+  -- opts = {
+  --   options = {
+  --     offsets = {
+  --       {
+  --         filetype = "NvimTree",
+  --         text = "",
+  --         highlight = "Directory",
+  --         text_align = "left",
+  --       },
+  --     },
+  --   },
+  -- },
 }
