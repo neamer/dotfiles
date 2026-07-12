@@ -12,13 +12,5 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Page down and center" })
 
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Page up and center" })
 
-local Util = require("lazyvim.util")
-
-vim.keymap.set("n", "<A-i>", function()
-  Util.terminal(nil, { border = "rounded" })
-end, { desc = "Terminal (root dir )" })
-
-vim.keymap.set("t", "<A-i>", "<cmd>close<cr>", { desc = "Hide Terminal" })
-
 vim.keymap.del({ "n", "i", "v" }, "<A-j>")
 vim.keymap.del({ "n", "i", "v" }, "<A-k>")
