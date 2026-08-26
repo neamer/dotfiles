@@ -31,4 +31,8 @@ return {
     statuscolumn = { enabled = true },
     words = { enabled = true },
   },
+  keys = {
+    { "<leader>fe", function() Snacks.explorer({ cwd = vim.uv.cwd() }) end, desc = "Explorer Snacks (cwd)" },
+    { "<leader>e", function() Snacks.explorer({ cwd = vim.uv.cwd() }) end, desc = "Explorer Snacks (cwd)" },
+  },
 }
